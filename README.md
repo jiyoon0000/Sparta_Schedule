@@ -32,4 +32,14 @@ CREATE TABLE `Sparta_Schedule`.`User` (
   `update_date` DATETIME NULL,
   PRIMARY KEY (`id`)
 );
+
+ALTER TABLE `Sparta_Schedule`.`Schedule` 
+ADD INDEX `user_id_idx` (`user_id` ASC) VISIBLE;
+;
+ALTER TABLE `Sparta_Schedule`.`Schedule` 
+ADD CONSTRAINT `user_id`
+  FOREIGN KEY (`user_id`)
+  REFERENCES `Sparta_Schedule`.`User` (`id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
 ```
