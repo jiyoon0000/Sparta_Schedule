@@ -13,10 +13,10 @@ https://documenter.getpostman.com/view/39376424/2sAY4vhi4F
 //Schedule 테이블 생성
 CREATE TABLE `Schedule` (
   `id` int NOT NULL,
-  `user_name` varchar(20) COLLATE utf8mb3_bin NOT NULL,
+  `user_name` varchar(20) NOT NULL,
   `password` int NOT NULL,
-  `title` varchar(45) COLLATE utf8mb3_bin NOT NULL,
-  `content` varchar(200) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT NULL,
+  `title` varchar(45) NOT NULL,
+  `content` varchar(200),
   `create_date` datetime DEFAULT NULL,
   `update_date` datetime DEFAULT NULL,
   `user_id` int NOT NULL,
